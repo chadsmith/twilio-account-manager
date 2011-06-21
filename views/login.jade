@@ -1,0 +1,23 @@
+!!! 5
+html(lang='en-us')
+	head
+		meta(charset='utf-8')
+		title Twilio Account Manager
+		link(rel='stylesheet', href='style.css')
+	body
+		form(method='post', action='/login')
+			h1 Twilio Account Manager
+			fieldset
+				p
+					label Account SID
+						br
+						input(type='text', name='account_sid')
+				p
+					label Auth Token
+						br
+						input(type='password', name='auth_token')
+				p
+					button Sign in
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js')
+		script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js')
+		script(src='script.js')

@@ -1,0 +1,17 @@
+!!! 5
+html(lang='en-us')
+	head
+		meta(charset='utf-8')
+		title Twilio Account Manager
+		link(rel='stylesheet', href='style.css')
+	body
+		header
+			h1 Twilio Account Manager
+		- for (var i in accounts)
+			section(id=i).account
+				h2= accounts[i].friendly_name
+				- for (var j in accounts[i].numbers)
+					div(id=j).number= accounts[i].numbers[j].friendly_name
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js')
+		script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js')
+		script(src='script.js')
